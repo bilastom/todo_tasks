@@ -8,10 +8,11 @@
     </div>
     <% @tasks.each do |task| %>
       <div class='list'>
-        <table>
+        <table class='<%= 'expired' if task.deadline < Time.now + 2.hours  %>'>
           <tbody>
             <tr><td><%= task.title %></td><td rowspan='2' class='right-link'><%= link_to 'Remove/Done', task, method: :delete, data: { confirm: 'Sure that you dont have to do this task?' } %></td></tr>
             <tr><td class='description'><%= task.description %></td></tr>
+            <tr><td class='deadline'><%= task.deadline.strftime("%Y-%m-%d %H:%M") %></td></tr>
           </tbody>
         </table>
       </div>
