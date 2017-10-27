@@ -52,7 +52,8 @@ class TasksController < ApplicationController
   end
 
   def empty_or_integers(time_values)
-    time_values.all?(&:empty?) || time_values.all? { |x| integer_string?(x) }
+    time_values.all?(&:nil?) || time_values.all?(&:empty?) ||
+      time_values.all? { |x| integer_string?(x) }
   end
 
   def integer_string?(value)
