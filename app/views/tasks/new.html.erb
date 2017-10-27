@@ -34,12 +34,28 @@
       <div class='row field'>
         <label>
           <span>Deadline</span>
-          <%= f.datetime_select :deadline,  default: Time.now + 3.days, datetime_separator: '- ' %>
+          <%= f.datetime_select :deadline,  prompt: true, datetime_separator: '- ' %>
         </label>
+        <button id="now">Set Now!</button>
       </div>
+
 
       <div class='row'>
         <button type="submit">Add it and Do it!</button>
       </div>
   <% end %>
 </div>
+<script type="text/javascript" charset="utf-8">
+  $('#now').click(function(e){
+      e.preventDefault();
+      var currentDate = new Date;
+      $('#task_deadline_1i').val(currentDate.getFullYear());
+      $('#task_deadline_2i').val(currentDate.getMonth() + 1);
+      $('#task_deadline_3i').val(currentDate.getDate());
+      $('#task_deadline_4i').val(currentDate.getHours());
+      $('#task_deadline_5i').val(currentDate.getMinutes());
+  })
+</script>
+
+
+

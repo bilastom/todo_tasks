@@ -89,6 +89,12 @@ ul li{
   display: inline-block;
 }
 
+#now {
+    margin-top: 2px;
+    padding: 5px;
+    background: grey;
+}
+
 .list {
   border-bottom: 1px solid #EAEAEA;
   background-color: #FFF;
@@ -109,14 +115,16 @@ ul li{
   color: grey;
 }
 
-.expired {
-  background: #ffe2e6;
+.expired::after {
+  content: 'expired';
+  font-size: 70%;
+  color: red;
 }
 
 .deadline {
-    font-size: 70%;
-    padding-top: 5px;
-    font-weight: 500;
+  font-size: 70%;
+  padding-top: 5px;
+  font-weight: 500;
 }
 
 table {

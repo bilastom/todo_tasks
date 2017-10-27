@@ -50,7 +50,7 @@ html{
 .basic input{
   color:  #5f5f5f;
   box-sizing: border-box;
-  width: 240px;
+  width: 320px;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
   padding: 12px;
   border: 1px solid #dbdbdb;
@@ -70,7 +70,7 @@ html{
   background-color: #ffffff;
   color:  #5f5f5f;
   box-sizing: border-box;
-  max-width: 240px;
+  max-width: 320px;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
   padding: 12px 4px;
   border: 1px solid #dbdbdb;
@@ -79,7 +79,7 @@ html{
 .basic textarea{
   color:  #5f5f5f;
   box-sizing: border-box;
-  width: 240px;
+  width: 320px;
   height: 80px;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
   font: normal 13px sans-serif;
@@ -152,7 +152,7 @@ html{
   }
 
   .basic select{
-    width: 240px;
+    width: 260px;
   }
 
   .basic input[type=checkbox]{
@@ -161,6 +161,10 @@ html{
 
   .basic .radio-buttons > div{
     margin: 0 0 10px;
+  }
+
+  .basic input, .basic textarea{
+    max-width: 260px;
   }
 
   .basic button{
